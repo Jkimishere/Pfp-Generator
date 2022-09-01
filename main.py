@@ -21,8 +21,6 @@ def generate_image(path):
     
 
     temp.paste(pfp)
-    temp.show()
-    ImageOps.mirror(pfp).show()
     temp.paste(ImageOps.mirror(pfp), (4,0))
     big = temp.resize((1024,1024),resample=Image.Resampling.BOX)
     big.save(path.strip() + '\\pfp.png')
